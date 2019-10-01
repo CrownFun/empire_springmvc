@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link href="../static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link href="../static/css/styles.css" th:href="@{/css/styles.css}" rel="stylesheet">
+</head>
+<body>
+<div th:fragment="header">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <h3 class="navbar-text"> Empire </h3>
+
+        <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+            <span class="glyphicon glyphicon-list"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navHeaderCollapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a th:href="@{/}">Strona Główna</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a th:href="@{/register}">Rejestracja</a></li>
+                <li><a style="color: orange" th:href="@{/user}" th:if="${session.userId}!=null" th:text="${session.userId}"></a></li>
+                <li><a th:href="@{/}" th:if ="${session.userId}==null" th:text="'Zaloguj się'"></a></li>
+                <li><a th:href="@{/logmeout}" th:unless ="${session.userId}==null" th:text="'Wyloguj się'"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</div>
+</body>
+</html>

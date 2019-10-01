@@ -1,0 +1,39 @@
+@CHARSET "UTF-8";
+
+.description{
+
+width:1600px;
+margin-left:20px;
+
+}
+
+.reg {
+    width: 400px; margin: 0 auto;margin-top: 5%;text-align: center
+} 
+
+.back {
+    width: 300px; margin: 0 auto; text-align: center;
+} 
+
+.logout { width: 200px;margin-left:auto; margin-right: auto; margin-top: 10%; text-align: center 
+
+}
+
+.error {
+    width: 200px;margin-left:auto; margin-right: auto; margin-top: 10%; text-align: center 
+}
+
+.success {
+    width: 400px;margin-left:auto; margin-right: auto; margin-top: 10%; text-align: center
+}
+
+.article{
+    background-color: lightgrey;
+}
+
+
+
+
+
+
+
